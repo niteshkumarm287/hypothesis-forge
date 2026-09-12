@@ -1,0 +1,54 @@
+{
+  "train": [
+    {
+      "text": "Production checkout API is returning 500 errors.",
+      "label": "incident"
+    },
+    {
+      "text": "Customers cannot log in after the latest release.",
+      "label": "incident"
+    },
+    {
+      "text": "Database upgrade is scheduled for Saturday evening.",
+      "label": "maintenance"
+    },
+    {
+      "text": "The payments service will be restarted during the approved change window.",
+      "label": "maintenance"
+    },
+    {
+      "text": "Where can I find the API support runbook?",
+      "label": "non_incident"
+    },
+    {
+      "text": "The operations team meeting starts at 10 AM.",
+      "label": "non_incident"
+    }
+  ],
+  "validation": [
+    {
+      "text": "PagerDuty reports that the production payment queue is stuck.",
+      "label": "incident"
+    },
+    {
+      "text": "Users are receiving errors when opening the mobile application.",
+      "label": "incident"
+    },
+    {
+      "text": "A planned Kubernetes node upgrade will begin tonight.",
+      "label": "maintenance"
+    },
+    {
+      "text": "The staging environment will be restarted as part of routine maintenance.",
+      "label": "maintenance"
+    },
+    {
+      "text": "Does anyone know who owns the inventory service?",
+      "label": "non_incident"
+    },
+    {
+      "text": "Welcome to the team, our new engineer starts Monday.",
+      "label": "non_incident"
+    }
+  ]
+}

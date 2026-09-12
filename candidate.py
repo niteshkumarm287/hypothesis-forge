@@ -1,36 +1,24 @@
 """Current experimental message classifier."""
 
-MAINTENANCE_KEYWORDS = [
-    "maintenance",
-    "planned",
-    "outage",
-    "scheduled",
-    "downtime",
-    "change window"
-]
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import Pipeline
 
-INCIDENT_KEYWORDS = [
-    "error",
-    "errors",
-    "outage",
-    "downtime",
-    "down",
-    "failed",
-    "failure",
-    "incident",
-    "pagerduty",
-    "stuck",
-]
+model = Pipeline([
+    ("text_features", TfidfVectorizer()), # convert text into numerical word features
+    ("classifier", LogisticRegression(max_iter=1000)), # learns how those features relate to labels
+])
+
+def train(examples):
+    texts = []
+    labels = []
+
+    for example in examples:
+        texts.append(example["text"])
+        labels.append(example["label"])
+
+    model.fit(texts, labels) # ths line performs the learning
 
 def predict(text):
-    normalized_text = text.lower()
-
-    for keyword in MAINTENANCE_KEYWORDS:
-        if keyword in normalized_text:
-            return "maintenance"
-
-    for keyword in INCIDENT_KEYWORDS:
-        if keyword in normalized_text:
-            return "incident"
-
-    return "non_incident"
+    predictions = model.predict([text])
+    return predictions[0]

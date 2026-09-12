@@ -5,7 +5,7 @@ Evaluation script for the mini-autoresearch project.
 import json
 from pathlib import Path
 
-from candidate import predict
+from candidate import predict, train
 
 DATA_FILE = Path(__file__).parent / "data" / "cases.json"
 
@@ -47,6 +47,10 @@ def main():
     data = load_data()
     training_examples = data["train"]
     validation_examples = data["validation"]
+
+    print()
+    print("Training model...")
+    train(training_examples)
 
     print(f"Training examples: {len(training_examples)}")
     print(f"Validation examples: {len(validation_examples)}")

@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 results.tsv
+.venv/
+run.log

@@ -23,6 +23,54 @@
     {
       "text": "The operations team meeting starts at 10 AM.",
       "label": "non_incident"
+    },
+    {
+      "text": "Checkout requests are timing out because service latency is elevated.",
+      "label": "incident"
+    },
+    {
+      "text": "Kafka consumer lag is delaying production order processing.",
+      "label": "incident"
+    },
+    {
+      "text": "PagerDuty alerted because the authentication service is unavailable.",
+      "label": "incident"
+    },
+    {
+      "text": "The payment queue has stopped processing customer transactions.",
+      "label": "incident"
+    },
+    {
+      "text": "The incident review meeting is scheduled for tomorrow.",
+      "label": "non_incident"
+    },
+    {
+      "text": "The postmortem from last week's outage has been published.",
+      "label": "non_incident"
+    },
+    {
+      "text": "Who owns the production checkout service?",
+      "label": "non_incident"
+    },
+    {
+      "text": "Reminder that the on-call handoff meeting begins at noon.",
+      "label": "non_incident"
+    },
+    {
+      "text": "TLS certificates will be rotated during the approved maintenance window.",
+      "label": "maintenance"
+    },
+    {
+      "text": "Cluster nodes will be replaced tonight under an approved change.",
+      "label": "maintenance"
+    },
+    {
+      "text": "Routine cache maintenance will take place this weekend.",
+      "label": "maintenance"
+    },
+    {
+      "text": "Security patches are scheduled for installation tomorrow.",
+      "label": "maintenance"
     }
   ],
   "validation": [

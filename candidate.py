@@ -13,10 +13,13 @@ INCIDENT_KEYWORDS = [
     "error",
     "errors",
     "outage",
+    "downtime",
     "down",
     "failed",
     "failure",
     "incident",
+    "pagerduty",
+    "stuck",
 ]
 
 def predict(text):

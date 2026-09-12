@@ -49,6 +49,18 @@
     {
       "text": "Welcome to the team, our new engineer starts Monday.",
       "label": "non_incident"
+    },
+    {
+      "text": "Checkout latency is causing customer requests to time out.",
+      "label": "incident"
+    },
+    {
+      "text": "TLS certificates will be rotated tonight during the approved window.",
+      "label": "maintenance"
+    },
+    {
+      "text": "The incident review meeting is scheduled for Friday.",
+      "label": "non_incident"
     }
   ]
 }

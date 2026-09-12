@@ -1,4 +1,4 @@
-# Mini AutoResearch Instructions
+# Hypothesis Forge Research Instructions
 
 ## Purpose
 
@@ -24,9 +24,10 @@ Because accuracy is already 100%, keep an equal-scoring experiment only when it 
 
 ## Files
 
-You may modify only:
+You may modify:
 
 - `candidate.py`
+- `results.tsv`, by appending one experiment row at a time
 
 You may read:
 
@@ -48,6 +49,8 @@ Never modify:
 - `evaluate.py`
 - `data/cases.json`
 - `.gitignore`
+
+Never delete or rewrite earlier rows in `results.tsv`.
 
 Do not install new dependencies.
 

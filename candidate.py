@@ -1,16 +1,19 @@
-"""Current experimental message classifier."""
+"""Train and run the current operational-message classifier."""
 
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 
-model = Pipeline([
-    # ("text_features", TfidfVectorizer()), # convert text into numerical word features
-    ("text_features", CountVectorizer(stop_words="english")), # plain word-presence counts, no IDF weighting
-    ("classifier", LogisticRegression()), # learns how those features relate to labels
-])
+model = Pipeline(
+    [
+        ("text_features", CountVectorizer(stop_words="english")),
+        ("classifier", LogisticRegression()),
+    ]
+)
 
-def train(examples):
+
+def train(examples: list[dict[str, str]]) -> None:
+    """Fit the classifier using labeled training examples."""
     texts = []
     labels = []
 
@@ -18,8 +21,10 @@ def train(examples):
         texts.append(example["text"])
         labels.append(example["label"])
 
-    model.fit(texts, labels) # ths line performs the learning
+    model.fit(texts, labels)
 
-def predict(text):
+
+def predict(text: str) -> str:
+    """Predict the category for one operational message."""
     predictions = model.predict([text])
-    return predictions[0]
+    return str(predictions[0])

@@ -8,9 +8,12 @@ from evaluate import evaluate_classifier, load_data
 
 TEST_FILE = Path(__file__).parent / "data" / "test_cases.json"
 
+
 def load_test_data():
+    """Load the holdout test examples."""
     with TEST_FILE.open(encoding="utf-8") as file:
         return json.load(file)
+
 
 def main():
     data = load_data()
@@ -18,7 +21,7 @@ def main():
     training_examples = data["train"]
     test_examples = load_test_data()
 
-    print("Training model....")
+    print("Training model...")
     train(training_examples)
 
     print()

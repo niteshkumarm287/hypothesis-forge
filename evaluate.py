@@ -1,6 +1,4 @@
-"""
-Evaluation script for the mini-autoresearch project.
-"""
+"""Train and evaluate the Hypothesis Forge candidate model."""
 
 import json
 from pathlib import Path
@@ -9,18 +7,24 @@ from candidate import predict, train
 
 DATA_FILE = Path(__file__).parent / "data" / "cases.json"
 
+
 def load_data():
-    with open(DATA_FILE, "r") as file:
+    """Load the fixed training and validation datasets."""
+    with DATA_FILE.open(encoding="utf-8") as file:
         return json.load(file)
 
+
 def count_labels(examples):
+    """Count how many examples belong to each category."""
     counts = {}
     for example in examples:
         label = example["label"]
         counts[label] = counts.get(label, 0) + 1
     return counts
 
+
 def evaluate_classifier(examples):
+    """Evaluate the trained candidate and return its correct predictions."""
     correct_count = 0
 
     for example in examples:
@@ -42,6 +46,7 @@ def evaluate_classifier(examples):
         )
 
     return correct_count
+
 
 def main():
     data = load_data()
@@ -68,6 +73,7 @@ def main():
     print("Summary")
     print(f"Correct: {correct_count}/{total_count}")
     print(f"Accuracy: {accuracy:.1f}%")
+
 
 if __name__ == "__main__":
     main()

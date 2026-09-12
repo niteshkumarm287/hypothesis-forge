@@ -1,0 +1,11 @@
+experiment	accuracy	status	description
+baseline	83.3	keep	handwritten keyword classifier
+alert-state-keywords	100.0	keep	add PagerDuty and stuck incident signals
+benchmark-v1-baseline	66.7	keep	expanded validation set with contextual edge cases
+expanded-training-data	66.7	keep	add balanced training examples
+tfidf-logistic-regression	100.0	keep	replace keyword rules with learned text classifier
+remove-stop-words	100.0	keep	maintain accuracy while removing noisy common English features
+naive-bayes-classifier	100.0	discard	swap LogisticRegression for MultinomialNB; equal accuracy but user preferred keeping LogisticRegression
+count-vectorizer	100.0	keep	replace TfidfVectorizer with CountVectorizer for simpler bag-of-words features
+default-max-iter	100.0	keep	remove explicit max_iter=1000; default LogisticRegression max_iter converges without warnings
+binary-count-features	100.0	discard	binary word-presence features vs raw counts; equal accuracy, no meaningful simplification over current CountVectorizer

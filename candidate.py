@@ -7,7 +7,7 @@ from sklearn.pipeline import Pipeline
 model = Pipeline([
     # ("text_features", TfidfVectorizer()), # convert text into numerical word features
     ("text_features", CountVectorizer(stop_words="english")), # plain word-presence counts, no IDF weighting
-    ("classifier", LogisticRegression(max_iter=1000)), # learns how those features relate to labels
+    ("classifier", LogisticRegression()), # learns how those features relate to labels
 ])
 
 def train(examples):

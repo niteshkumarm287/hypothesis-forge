@@ -1,0 +1,38 @@
+[
+  {
+    "text": "Order submission is failing for production customers.",
+    "label": "incident"
+  },
+  {
+    "text": "Authentication requests have stopped succeeding in the US region.",
+    "label": "incident"
+  },
+  {
+    "text": "Monitoring detected unusually high latency on checkout requests.",
+    "label": "incident"
+  },
+  {
+    "text": "Network certificates are being renewed under an approved change.",
+    "label": "maintenance"
+  },
+  {
+    "text": "Database nodes are being patched this weekend.",
+    "label": "maintenance"
+  },
+  {
+    "text": "The cache cluster replacement begins during tonight's service window.",
+    "label": "maintenance"
+  },
+  {
+    "text": "The incident retrospective notes are ready for review.",
+    "label": "non_incident"
+  },
+  {
+    "text": "Can someone share the ownership page for the payments service?",
+    "label": "non_incident"
+  },
+  {
+    "text": "Reminder that the engineering standup starts at 9 AM.",
+    "label": "non_incident"
+  }
+]

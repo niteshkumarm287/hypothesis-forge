@@ -157,5 +157,9 @@ See [`research.md`](research.md) for the full research contract.
 - Add cross-validation and probability-based log loss.
 - Measure runtime and model size alongside accuracy.
 - Parse and record experiment results automatically.
-- Add automated tests and continuous integration.
+- Expand regression tests as new model behaviors are introduced.
 - Explore a small neural model after establishing stronger baselines.
+
+## Development and review
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for local checks, configuration handling, and the review workflow.
